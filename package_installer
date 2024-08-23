@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#command=/usr/bin/htop
+#Enter the package name
+#This is a simple script for installing package with apt install utility
+ 
+
+echo "Enter the package name you are tring to install "
+read packageName
+
+
+if [ -f $packageName ]
+then  
+    echo "$packageName is available , running ...."
+else
+    echo "$packageName is not installed or available  on your distro"
+    sudo apt update && sudo apt install -y $packageName
+fi
+
+$packageName

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+#echo "Enter your age: "
+#read age
+
+
+#if [ $age -gt  10 ]
+#then
+ #   echo "Welcome to our hacking conference mate"
+#else
+ #  echo "You are too you to be here,you need a guardian"
+#fi
+
+#echo "Evaluating a number against 200"
+#read number
+
+#if [ $number -ne  200 ]
+#then
+ #   echo "The nubmer entered is greater  than 200"
+#else
+ #   echo "The number is equal to 200"
+#fi
+
+
+#checking the presence of a file
+
+if [ -f ~/myfile ]
+then
+    echo "The file exixts"
+    cat myfile
+else
+    echo "The file does not exixts"
+fi

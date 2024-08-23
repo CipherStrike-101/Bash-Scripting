@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+echo "Hello mate , what's your alias name? "
+read name
+
+echo "Welcome $name , are you ready to hack things....let's get it"
+
+
+#Asking the user to enter the  target ip
+
+echo "Enter the target IP address, to start with an nmap scan"
+read ipaddr
+
+sudo proxychains nmap -sS -O $ipaddr >/dev/null -oG target_scan_res
+
+cat target_scan_res | grep open > target_scan_open_ports
+
+cat target_scan_open_ports 
+
+
+
+
+
